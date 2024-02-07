@@ -24,58 +24,57 @@ We do not ensure compatibility with any other versions at this time.
 
 ### Datasets
 
-For the COCO dataset, download the 2017 train and val annotations and images [here](https://cocodataset.org/#download).
-For the BDD100k dataset, download the 100k images [here](https://doc.bdd100k.com/download.html).
-For the Coda dataset, download the 2022 test and val dataset [here](https://coda-dataset.github.io/download.html).
-For the Carla dataset, download [here](https://nuage.insa-rouen.fr/index.php/s/wWkLy8gB7SgwF2N?path=CornerSet_Object_level_06_11_2023).
+For the COCO dataset, download the 2017 train and val annotations and images [here](https://cocodataset.org/#download). <br>
+For the BDD100k dataset, download the 100k images [here](https://doc.bdd100k.com/download.html). <br>
+For the Coda dataset, download the 2022 test and val dataset [here](https://coda-dataset.github.io/download.html). <br>
+For the Carla dataset, download [here](https://nuage.insa-rouen.fr/index.php/s/wWkLy8gB7SgwF2N?path=CornerSet_Object_level_06_11_2023). <br>
 
 The repository tree dataset structure is as follows:
 
 
-├── bdd100k
-|   ├── train
-|   |   ├── images
-|   |   |   └──\*.jpg
-|   |   └── annotations.json
-|   ├── val
-|   |   ├── images
-|   |   |   └──\*.jpg
-|   |   └── annotations.json
-|   └── test
-|       ├── images
-|       |   └──\*.jpg
-|       └── annotations.json
-|
-├── coda
-|   ├── val
-|   |   ├── images
-|   |   |   └──\*.jpg
-|   |   └── annotations.json
-|   └── test
-|       ├── images
-|       |   └──\*.jpg
-|       └── annotations.json
-|
-├── coco
-|   ├── val
-|   |   ├── images
-|   |   |   └──\*.jpg
-|   |   └── targets.json
-|   └── train
-|       ├── images
-|       |   └──\*.jpg
-|       └── targets.json
-|
-├── carla
-|   └── mess
-|       ├── rgb
-|       |   └── \*.png
-|       └── labels
-|           └── \*.json
+├── bdd100k<br>
+|   ├── train<br>
+|   |   ├── images<br>
+|   |   |   └──\*.jpg<br>
+|   |   └── annotations.json<br>
+|   ├── val<br>
+|   |   ├── images<br>
+|   |   |   └──\*.jpg<br>
+|   |   └── annotations.json<br>
+|   └── test<br>
+|       ├── images<br>
+|       |   └──\*.jpg<br>
+|       └── annotations.json<br>
+|<br>
+├── coda<br>
+|   ├── val<br>
+|   |   ├── images<br>
+|   |   |   └──\*.jpg<br>
+|   |   └── annotations.json<br>
+|   └── test<br>
+|       ├── images<br>
+|       |   └──\*.jpg<br>
+|       └── annotations.json<br>
+|<br>
+├── coco<br>
+|   ├── val<br>
+|   |   ├── images<br>
+|   |   |   └──\*.jpg<br>
+|   |   └── targets.json<br>
+|   └── train<br>
+|       ├── images<br>
+|       |   └──\*.jpg<br>
+|       └── targets.json<br>
+|<br>
+├── carla<br>
+|   └── mess<br>
+|       ├── rgb<br>
+|       |   └── \*.png<br>
+|       └── labels<br>
+|           └── \*.json<br>
 
 
-
-## Configuration
+## Configuration
 
 The configuration parameters are defined in YAML format under the `config/` directory. Modify these files to make the code work on your machine.
 
@@ -94,7 +93,7 @@ We base all our modifications of Faster R-CNN on the PyTorch implementation for 
 
 ## Contact Information
 
-For any questions or inquiries, feel free to contact Corentin Bunel at <mailto:corentin.bunel@insa-rouen.fr>
+For any questions or inquiries, feel free to contact Corentin Bunel at [corentin.bunel@insa-rouen.fr](mailto:corentin.bunel@insa-rouen.fr).
 
 
 ## Acknowledgements:
