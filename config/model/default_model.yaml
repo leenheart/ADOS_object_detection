@@ -1,0 +1,41 @@
+
+load: False
+to_load: ""
+load_path: "${pc_config.model_save_path}model_archive/"
+save_path: "${pc_config.model_save_path}model_saves/"
+save_predictions_path:  "${pc_config.model_save_path}prediction_saves/"
+save_predictions: False
+
+collate_fn: "list"
+
+optimizer: "SGD" # can be SGD or Adam
+learning_rate: 0.001
+momentum: 0.9
+weight_decay: 0.0001
+class_loss_reduction: "sum" # can be sum or mean
+class_loss_factor: 1
+
+class_metric: False
+log_heatmap: False
+log_fcos_inside: False
+calcul_metric_train_each_nb_batch: 3
+save_each_epoch: 10
+
+enable_unknown: False
+enable_semantics_classes: False
+enable_semantics_centerness: False
+
+prediction_from_rpn: False
+
+my_scoring_function_filter: False # careful ! change param just beside bot #change scoring for eliminating boxes from sqrt(centerness * classe) to (centerness - 1)(classe - 1)  
+object_score_threshold: 0.6
+
+
+nms_iou_threshold: 0.5
+threshold_score_centerness_unknown: 0.5
+threshold_score_remove: 0.2
+threshold_score_good: 0.5
+
+pretrained: false
+rl_model: false
+rl_model_save_path: "${pc_config.model_save_path}rl_model_saves/rl_model_360_states_3_actions_"

@@ -1,0 +1,7 @@
+
+dataset_path: "/home/cbunel/Bureau/Thèse/git/data/"
+model_save_path: "/home/cbunel/Bureau/Thèse/git/model_saves/"
+
+dataloader:
+    batch_size: 16
+    num_workers: 20

@@ -1,0 +1,16 @@
+torch
+torchvision
+pytorch_lightning
+matplotlib
+hydra-core
+wandb
+matplotlib
+pytest
+orjson
+ultralytics
+prefetch_generator
+lightning-flash
+scikit-learn
+scikit-image
+hydra-optuna-sweeper
+pycocotools

@@ -1,0 +1,74 @@
+defaults:
+    - _self_
+    - model: fcos
+    - pc_config: laptop_corentin
+    - dataset: bdd100k
+    - override hydra/sweeper: optuna
+
+
+debug: False
+
+test_on_train: True
+test_on_val: True
+test_on_test: True
+
+max_epochs: 10
+combine_classes: False
+show_image: True  #show the image
+
+# Speed parameters
+accumulate_gradient_nb_batch: 16
+precision_float: 32
+check_val_every_n_epoch: 1
+
+
+logger:
+    log_every_n_steps: 1
+    wandb_offline: False 
+    wandb_on: True
+    project_name: "OpenWorldObjectDetection"
+
+dataloader:
+    batch_size: ${pc_config.dataloader.batch_size}
+    num_workers: ${pc_config.dataloader.num_workers}
+    shuffle_in_training: True
+
+metrics:
+    considering_known_classes: True
+    testing:
+        mAP: True
+        flags: True # FN/TP/TN
+        precision: True
+        recall: True
+        f1_score: True
+        UDR: True
+        UDP: True
+        WI: True # Wilderness Impact
+        A_OSE: True # Open-Set Error
+    validation:
+        mAP: True
+        flags: True # FN/TP/TN
+        precision: True
+        recall: True
+        f1_score: True
+        UDR: false
+        UDP: false
+        WI: false # Wilderness Impact
+        A_OSE: false # Open-Set Error
+    scores:
+        color_contrast_ring_factor: 0.1
+        edge_density_inner_ring_factor: 0.2
+        threshold_score_minimum: 0.2
+        threshold_score: 0.5
+        iou_threshold: 0.5
+        semantic_segmentation_classes_as_objects:  [2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 18, 24, 25, 26]
+        semantic_segmentation_classes_as_drivable:  [8, 9] # ground = 20, terrain = 28
+        #self.semantic_segmentation_classes_as_background = [0, 1, 7, 8, 9, 10, 17, 19, 20, 21, 22, 23, 27, 28]
+
+
+hydra:
+    sweeper:
+        direction: minimize #maximize
+        study_name: Color_contrast
+        n_trials: 5
+

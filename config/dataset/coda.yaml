@@ -1,0 +1,13 @@
+defaults:    
+    - default_dataset
+
+name: "coda"
+path: "${pc_config.dataset_path}coda/val"
+shuffle: False
+image_width: 1355
+image_height: 720
+image_resize_width: 1355 #676 # 1355 #1280
+image_resize_height: 720 #360 # 720 #768
+max_size: 4883 # Max is 4883
+classes_names: ['person', 'cyclist', 'car', 'truck', 'tricycle', 'bus', 'bicycle', 'moped', 'motorcycle', 'stroller', 'cart', 'construction_vehicle', 'dog', 'barrier', 'bollard', 'sentry_box', 'traffic_cone', 'traffic_island', 'traffic light', 'traffic sign', 'debris', 'suitcace', 'dustbin', 'concrete_block', 'machinery', 'garbage', 'plastic_bag', 'stone', 'misc']
+            #['pedestrian', 'cyclist', 'car', 'truck', 'tricycle', 'bus', 'bicycle', 'moped', 'motorcycle', 'stroller', 'cart', 'construction_vehicle', 'dog', 'barrier', 'bollard', 'sentry_box', 'traffic_cone', 'traffic_island', 'traffic_light', 'traffic_sign', 'debris', 'suitcace', 'dustbin', 'concrete_block', 'machinery', 'garbage', 'plastic_bag', 'stone', 'misc']

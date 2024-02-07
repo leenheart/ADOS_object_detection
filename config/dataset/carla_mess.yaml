@@ -1,0 +1,18 @@
+defaults:    
+    - default_dataset
+
+name: "carla"
+path: "${pc_config.dataset_path}carla/mess"
+shuffle: False
+image_width: 1820
+image_height: 1240
+image_resize_width: 1820 #640 # 1280 #1280
+image_resize_height: 1240 #512 # 1024 #768
+max_size: 1998
+train_max_size: 1300
+val_max_size: 300
+test_max_size: 400
+with_predictions: False
+json_label_name: "label"
+classes_names: ['pedestrian', 'car', 'truck', 'bicycle', 'motorcycle', 'traffic_sign', 'traffic_light', 'riders', 'bus', 'roads', "sidewalks", "building", "walls", "sky", "vegetation", "static", "dynamic", "other", "roadLines", "ground", "rail_track", "water", 'pole', 'fence', 'bridge', 'guard_rail', 'terrain', 'cyclist', "unknown"]
+classes_background: ["unknown", "other", "roadLines", "ground", "sky", "rail_track", "vegetation", "water", "terrain", "walls", "building", "sidewalks", "roads", "pole", "bridge"]

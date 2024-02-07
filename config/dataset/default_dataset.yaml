@@ -1,0 +1,5 @@
+
+image_folder_name: "images"
+annotation_file_name: "targets.json"
+max_size: None
+with_predictions: False
